@@ -14,7 +14,7 @@ import javax.inject.Singleton
 class PresenterModule {
     @Provides
     @Singleton
-    fun provideHomepagePresenter(homepage: Homepage): HomepagePresenter = HomepagePresenterImpl()
+    fun provideHomepagePresenter(homepage: Homepage): HomepagePresenter = HomepagePresenterImpl(homepage)
 
     @Provides
     @Singleton
