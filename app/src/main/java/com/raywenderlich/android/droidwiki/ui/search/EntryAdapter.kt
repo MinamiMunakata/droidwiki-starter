@@ -41,10 +41,10 @@ import com.raywenderlich.android.droidwiki.model.*
 import com.raywenderlich.android.droidwiki.utils.parseHtml
 
 class EntryAdapter(private val context: Context, private val results: List<Entry>) : RecyclerView.Adapter<EntryAdapter.EntryHolder>() {
-  override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) =
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
       EntryHolder(LayoutInflater.from(context).inflate(R.layout.wiki_result, parent, false))
 
-  override fun onBindViewHolder(holder: EntryHolder?, position: Int) {
+  override fun onBindViewHolder(holder: EntryHolder, position: Int) {
     holder?.let {
       it.titleView.text = results[position].title
       it.snippetView.text = results[position].snippet.parseHtml()
